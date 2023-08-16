@@ -1,0 +1,93 @@
+/* general style */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eff1f2;
+  height: 100vh;
+  max-width: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#main_header .container p {
+  margin-top: 40px;
+}
+
+/* for input section  */
+
+#list_main .form-control {
+  border-color: transparent;
+}
+#list_main .form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+#list_main .select-input.form-control[readonly]:not([disabled]) {
+  background-color: #fbfbfb;
+}
+
+/* for list item  */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.task {
+  margin-top: 20px;
+}
+.task #my_list li {
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+  background: #0275d8;
+  color: white;
+  font-size: 18px;
+  padding: 12px 8px 12px 40px;
+  margin-bottom: 5px;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.task #my_list li:hover {
+  background: #5f7282;
+}
+
+.task #my_list li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  top: 15px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  background-color: white;
+  color: red;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  color: black;
+  text-decoration: line-through;
+}
